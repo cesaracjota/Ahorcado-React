@@ -1,0 +1,114 @@
+main {
+  text-align: center;
+  display:flex;
+  flex-direction:column;
+  padding: 35px 20px;
+  align-items:center
+}
+
+footer{
+  width:100%;
+  background:black;
+  padding:20px
+}
+/*
+  Theme: myTheme1
+*/
+.simple-keyboard.myTheme1 {
+  background-color: #0f1b4a;
+  border-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.simple-keyboard.myTheme1 .hg-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0000008a;
+  color: white;
+      border-bottom: 2px solid #000000
+}
+.simple-keyboard.myTheme1 .hg-button:hover {
+  background: #ffffff0d;
+}
+
+.simple-keyboard.myTheme1 .hg-button:active {
+  background: #1c4995;
+  color: white;
+}
+.hg-theme-default .hg-button.hg-standardBtn{
+  width:25px
+}
+
+
+
+
+#root .simple-keyboard.myTheme1 + .simple-keyboard-preview {
+  background: #1c4995;
+}
+
+
+@keyframes vectorBodyAnimation {
+  0%   {transform: rotate(-2deg);}
+  50%  {transform: rotate(2deg);}
+  100%  {transform: rotate(-2deg);}
+}
+@keyframes lHandAnimation {
+  0%   {transform: rotate(55deg);}
+  50%  {transform: rotate(80deg);}
+  100%  {transform: rotate(55deg);}
+}
+@keyframes rHandAnimation {
+  0%   {transform: rotate(285deg);}
+  50%  {transform: rotate(290deg);}
+  100%  {transform: rotate(285deg);}
+}
+@keyframes lFeetAnimation {
+  0%   {transform: rotate(1deg);}
+  50%  {transform: rotate(6deg);}
+  100%  {transform: rotate(1deg);}
+}
+@keyframes rFeetAnimation {
+  0%   {transform: rotate(-18deg);}
+  50%  {transform: rotate(-1deg);}
+  100%  {transform: rotate(-18deg);}
+}
+/* The element to apply the animation to */
+#vectorBody{
+  transform-origin: 18% 23%;
+  animation-name: vectorBodyAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+#lHand{
+  transform-origin: 16% 54%;
+  animation-name: lHandAnimation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+#rHand{
+  transform-origin: 14% 54%;
+  animation-name: rHandAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#lFeet{
+  transform-origin: 14% 68%;
+  animation-name: lFeetAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#rFeet{
+  transform-origin: 14% 68%;
+  animation-name:rFeetAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 700px) {
+  #GameDiv {
+    flex-direction: column-reverse;
+  }
+}
